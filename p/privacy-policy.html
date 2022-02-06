@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/examples/blog/blog.css" rel="stylesheet">
+	                  <link rel="shortcut icon" href="https://lh3.googleusercontent.com/-QUTJuckOGQw/Yazw2hUZUjI/AAAAAAAAAgk/IUP2mZ3TwQ4Egj3i8jmK8uq7b-hf0ECqACNcBGAsYHQ/w100-h100-p-k-no-nu/logo.png" type="image/png">
+        <link rel="icon" href="https://lh3.googleusercontent.com/-QUTJuckOGQw/Yazw2hUZUjI/AAAAAAAAAgk/IUP2mZ3TwQ4Egj3i8jmK8uq7b-hf0ECqACNcBGAsYHQ/w100-h100-p-k-no-nu/logo.png" type="image/png">
+<style type="text/css">
+#header.shadow {
+    box-shadow: var(--card_shadow);
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+.wrapper {
+    width: 768px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+	margin-top: 20px;
+}
+#header-widget {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 20px;
+}
+#header-widget .widget.Header {
+    justify-content: left;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.w3schools.com/howto/searchicon.png');
+  background-position: 12px 14px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+#header-widget #search {
+    width: 100%;
+    margin: auto;
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+input[type=text]:focus {
+  width: 100%;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jumbotron {
+    background-size: cover;
+    padding: 7rem 1rem;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        padding-left: 1rem;
+}
+.pl-0, .px-0 {
+    padding-left: 0 !important;
+}
+.pb-0, .py-0 {
+    padding-bottom: 0 !important;
+}
+.pt-0, .py-0 {
+    padding-top: 0 !important;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+.tofront {
+    position: relative;
+    z-index: 1;
+}
+.h-100 {
+    height: 100% !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.align-self-center {
+    align-self: center !important;
+}
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.rounded {
+    border-radius: 0.25rem !important;
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+  outline: none;
+  background-color: black;
+}
+.article-headline {
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #222222;
+}
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 84%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem; }
+  .badge:empty {
+    display: none; }
+
+.btn .badge {
+  position: relative;
+  top: -1px; }
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem; }
+
+.badge-primary {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-primary[href]:hover, .badge-primary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-secondary {
+  color: #fff;
+  background-color: #7832e2; }
+  .badge-secondary[href]:hover, .badge-secondary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5f1cc5; }
+
+.badge-success {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-success[href]:hover, .badge-success[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-info {
+  color: #212529;
+  background-color: #09ebaf; }
+  .badge-info[href]:hover, .badge-info[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #07ba8a; }
+
+.badge-warning {
+  color: #212529;
+  background-color: #ffde03; }
+  .badge-warning[href]:hover, .badge-warning[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #cfb400; }
+
+.badge-danger {
+  color: #fff;
+  background-color: #ea2f65; }
+  .badge-danger[href]:hover, .badge-danger[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #d1154b; }
+
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa; }
+  .badge-light[href]:hover, .badge-light[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #dae0e5; }
+
+.badge-dark {
+  color: #fff;
+  background-color: #212529; }
+  .badge-dark[href]:hover, .badge-dark[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0a0c0d; }
+
+.badge-white {
+  color: #212529;
+  background-color: #fff; }
+  .badge-white[href]:hover, .badge-white[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #e6e6e6; }
+
+.badge-purple {
+  color: #fff;
+  background-color: #ad6edd; }
+  .badge-purple[href]:hover, .badge-purple[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #9645d3; }
+
+.badge-salmon {
+  color: #212529;
+  background-color: #ff977a; }
+  .badge-salmon[href]:hover, .badge-salmon[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #ff6f47; }
+
+.badge-cyan {
+  color: #212529;
+  background-color: #35bdff; }
+  .badge-cyan[href]:hover, .badge-cyan[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #02acff; }
+
+.badge-gray {
+  color: #212529;
+  background-color: #ced4da; }
+  .badge-gray[href]:hover, .badge-gray[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #b1bbc4; }
+
+.badge-indigo {
+  color: #fff;
+  background-color: #502c6c; }
+  .badge-indigo[href]:hover, .badge-indigo[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #351d48; }
+
+.badge-orange {
+  color: #212529;
+  background-color: #fbb500; }
+  .badge-orange[href]:hover, .badge-orange[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c89000; }
+
+.badge-lightblue {
+  color: #212529;
+  background-color: #e8f3ec; }
+  .badge-lightblue[href]:hover, .badge-lightblue[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c6e2d0; }
+.container {
+	max-width: 1070px;
+}
+.box-shadow{
+	box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+.pb-4, .py-4 {
+    padding-bottom: 1.5rem !important;
+}
+.pt-4, .py-4 {
+    padding-top: 1.5rem !important;
+}
+.spanborder {
+    border-bottom: 1px solid #e8f3ec;
+    margin-bottom: 2rem;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.themed-grid-col {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgb(255 255 255);
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+}
+.col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+</style>
+	<title>Privacy Policy</title>
+	</head>
+<body>
+<!-- header -->
+	<header id="header" class="shadow">
+<div class="wrapper">
+<div class="header-widget section" id="header-widget" name="#header-widget">
+<div class="widget Header" data-version="2" id="Header1">
+<div id="logo">
+<a href="/" title="RC Hobby">
+<img alt="RC Hobby" src="https://lh3.googleusercontent.com/-QUTJuckOGQw/Yazw2hUZUjI/AAAAAAAAAgk/IUP2mZ3TwQ4Egj3i8jmK8uq7b-hf0ECqACNcBGAsYHQ/w100-h100-p-k-no-nu/logo.png" width="40" height="40">
+</a>
+</div>
+</div>
+<div class="widget Label" data-version="2" id="Label1">
+<div id="search">
+<form action="/" method="get">
+  <input type="text" name="q" placeholder="Search.." aria-label="Search">
+</form>
+			  </div>
+			  </div>
+			  </div>
+			  			  			  <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between" style="background-color:#fff; border-t:1px solid #e5e5e5">
+		    <a class="p-2 text-muted" href="/p/about.html">About</a>
+			<a class="p-2 text-muted" href="/p/contact.html">Contact</a>
+			<a class="p-2 text-muted" href="/p/dmca.html">DMCA</a>
+			<a class="p-2 text-muted" href="/p/privacy-policy.html">Privacy Policy</a>
+			<a class="p-2 text-muted" href="/p/copyright.html">Copyright</a>
+			</nav>
+			</div>
+			  </div>
+			  </header>
+			  <div class="container">
+<div class="row mb-2">
+							<div class="col-sm-12 p-2">
+											</div> 
+		  <article>
+							<h1>Privacy Policy</h1>
+			<p style="text-align: justify;">The following is the privacy policy of google, so with that I will implement on my blog by e-mail address&nbsp;contact@www.eluxurysall.com.</p>
+<p style="text-align: justify;">Last modified: March 1, 2012 (<a href="http://www.google.com/policies/privacy/archive/" rel="nofollow">view archived versions</a>)</p>
+<p style="text-align: justify;">There are many different ways you can use our services – to search for and share information, to communicate with other people or to create new content. When you share information with us, for example by creating a&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-account" rel="nofollow">Google Account</a>, we can make those services even better – to show you more relevant search results and ads, to help you connect with people or to make sharing with others quicker and easier. As you use our services, we want you to be clear how we’re using information and the ways in which you can protect your privacy.</p>
+<p style="text-align: justify;">Our Privacy Policy explains:</p>
+<ul style="text-align: justify;">
+<li>What information we collect and why we collect it.</li>
+<li>How we use that information.</li>
+<li>The choices we offer, including how to access and update information.</li>
+</ul>
+<p style="text-align: justify;">We’ve tried to keep it as simple as possible, but if you’re not familiar with terms like cookies, IP addresses, pixel tags and browsers, then read about these&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/" rel="nofollow">key terms</a>&nbsp;first. Your privacy matters to Google so whether you are new to Google or a long-time user, please do take the time to get to know our practices – and if you have any questions&nbsp;<a href="http://www.google.com/support/websearch/bin/answer.py?answer=151265&amp;hl=en" rel="nofollow">contact us</a>.</p>
+<h3 id="infocollect" style="text-align: justify;">Information we collect</h3>
+<p style="text-align: justify;">We collect information to provide better services to all of our users – from figuring out basic stuff like which language you speak, to more complex things like which ads you’ll find most useful or the people who matter most to you online.</p>
+<p style="text-align: justify;">We collect information in two ways:</p>
+<ul style="text-align: justify;">
+<li>Information you give us.&nbsp;For example, many of our services require you to sign up for a Google Account. When you do, we’ll ask for&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-personal-info" rel="nofollow">personal information</a>, like your name, email address, telephone number or credit card. If you want to take full advantage of the sharing features we offer, we might also ask you to create a publicly visible&nbsp;<a href="http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=112783" rel="nofollow">Google Profile</a>, which may include your name and photo.</li>
+<li>Information we get from your use of our services.&nbsp;We may collect information about the services that you use and how you use them, like when you visit a website that uses our advertising services or you view and interact with our ads and content. This information includes:
+<ul>
+<li>Device informationWe may collect device-specific information (such as your hardware model, operating system version, unique device identifiers, and mobile network information including phone number). Google may associate your device identifiers or phone number with your Google Account.</li>
+<li>Log informationWhen you use our services or view content provided by Google, we may automatically collect and store certain information in&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-server-logs" rel="nofollow">server logs</a>. This may include:
+<ul>
+<li>details of how you used our service, such as your search queries.</li>
+<li>telephony log information like your phone number, calling-party number, forwarding numbers, time and date of calls, duration of calls, SMS routing information and types of calls.</li>
+<li><a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-ip" rel="nofollow">Internet protocol address</a>.</li>
+<li>device event information such as crashes, system activity, hardware settings, browser type, browser language, the date and time of your request and referral URL.</li>
+<li>cookies that may uniquely identify your browser or your Google Account.</li>
+</ul>
+</li>
+<li>Location informationWhen you use a location-enabled Google service, we may collect and process information about your actual location, like GPS signals sent by a mobile device. We may also use various technologies to determine location, such as sensor data from your device that may, for example, provide information on nearby Wi-Fi access points and cell towers.</li>
+<li>Unique application numbersCertain services include a unique application number. This number and information about your installation (for example, the operating system type and application version number) may be sent to Google when you install or uninstall that service or when that service periodically contacts our servers, such as for automatic updates.</li>
+<li>Local storageWe may collect and store information (including personal information) locally on your device using mechanisms such as browser web storage (including HTML&nbsp;5) and application data caches.</li>
+<li>Cookies and anonymous identifiersWe use various technologies to collect and store information when you visit a Google service, and this may include sending one or more&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-cookie" rel="nofollow">cookies</a>&nbsp;or&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-identifier" rel="nofollow">anonymous identifiers</a>&nbsp;to your device. We also use cookies and anonymous identifiers when you interact with services we offer to our partners, such as advertising services or Google features that may appear on other sites.</li>
+</ul>
+</li>
+</ul>
+<h3 id="infouse" style="text-align: justify;">How we use information we collect</h3>
+<p style="text-align: justify;">We use the information we collect from all of our services to provide, maintain, protect and improve them, to develop new ones, and to protect Google and our users. We also use this information to offer you tailored content – like giving you more relevant search results and ads.</p>
+<p style="text-align: justify;">We may use the name you provide for your Google Profile across all of the services we offer that require a Google Account. In addition, we may replace past names associated with your Google Account so that you are represented consistently across all our services. If other users already have your email, or other information that identifies you, we may show them your publicly visible Google Profile information, such as your name and photo.</p>
+<p style="text-align: justify;">When you contact Google, we may keep a record of your communication to help solve any issues you might be facing. We may use your email address to inform you about our services, such as letting you know about upcoming changes or improvements.</p>
+<p style="text-align: justify;">We use information collected from cookies and other technologies, like&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-pixel" rel="nofollow">pixel tags</a>, to improve your user experience and the overall quality of our services. For example, by saving your language preferences, we’ll be able to have our services appear in the language you prefer. When showing you tailored ads, we will not associate a cookie or anonymous identifier with sensitive categories, such as those based on race, religion, sexual orientation or health.</p>
+<p style="text-align: justify;">We may combine personal information from one service with information, including personal information, from other Google services – for example to make it easier to share things with people you know. We will not combine DoubleClick cookie information with personally identifiable information unless we have your opt-in consent.</p>
+<p style="text-align: justify;">We will ask for your consent before using information for a purpose other than those that are set out in this Privacy Policy.</p>
+<p style="text-align: justify;">Google processes personal information on our servers in many countries around the world. We may process your personal information on a server located outside the country where you live.</p>
+<h3 id="infochoices" style="text-align: justify;">Transparency and choice</h3>
+<p style="text-align: justify;">People have different privacy concerns. Our goal is to be clear about what information we collect, so that you can make meaningful choices about how it is used. For example, you can:</p>
+<ul style="text-align: justify;">
+<li><a href="https://www.google.com/dashboard/?hl=en" rel="nofollow">Review and control</a>&nbsp;certain types of information tied to your Google Account by using Google Dashboard.</li>
+<li><a href="https://www.google.com/settings/ads/preferences?hl=en" rel="nofollow">View and edit</a>&nbsp;your ads preferences, such as which categories might interest you, using the Ads Preferences Manager. You can also opt out of certain Google advertising services here.</li>
+<li><a href="http://support.google.com/accounts/bin/answer.py?hl=en&amp;answer=97706" rel="nofollow">Use our editor</a>&nbsp;to see and adjust how your Google Profile appears to particular individuals.</li>
+<li><a href="http://support.google.com/plus/bin/static.py?hl=en&amp;page=guide.cs&amp;guide=1257347" rel="nofollow">Control</a>&nbsp;who you share information with.</li>
+<li><a href="http://www.dataliberation.org/" rel="nofollow">Take information</a>&nbsp;out of many of our services.</li>
+</ul>
+<p style="text-align: justify;">You may also set your browser to block all cookies, including cookies associated with our services, or to indicate when a cookie is being set by us. However, it’s important to remember that many of our services may not function properly if your cookies are disabled. For example, we may not remember your language preferences.</p>
+<h3 id="infosharing" style="text-align: justify;">Information you share</h3>
+<p style="text-align: justify;">Many of our services let you share information with others. Remember that when you share information publicly, it may be indexable by search engines, including Google. Our services provide you with different options on sharing and removing your content.</p>
+<h3 id="access" style="text-align: justify;">Accessing and updating your personal information</h3>
+<p style="text-align: justify;">Whenever you use our services, we aim to provide you with access to your personal information. If that information is wrong, we strive to give you ways to update it quickly or to delete it – unless we have to keep that information for legitimate business or legal purposes. When updating your personal information, we may ask you to verify your identity before we can act on your request.</p>
+<p style="text-align: justify;">We may reject requests that are unreasonably repetitive, require disproportionate technical effort (for example, developing a new system or fundamentally changing an existing practice), risk the privacy of others, or would be extremely impractical (for instance, requests concerning information residing on backup tapes).</p>
+<p style="text-align: justify;">Where we can provide information access and correction, we will do so for free, except where it would require a disproportionate effort. We aim to maintain our services in a manner that protects information from accidental or malicious destruction. Because of this, after you delete information from our services, we may not immediately delete residual copies from our active servers and may not remove information from our backup systems.</p>
+<h3 id="nosharing" style="text-align: justify;">Information we share</h3>
+<p style="text-align: justify;">We do not share personal information with companies, organizations and individuals outside of Google unless one of the following circumstances apply:</p>
+<ul style="text-align: justify;">
+<li>With your consentWe will share personal information with companies, organizations or individuals outside of Google when we have your consent to do so. We require opt-in consent for the sharing of any&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-sensitive-info" rel="nofollow">sensitive personal information</a>.</li>
+<li>With domain administratorsIf your Google Account is managed for you by a&nbsp;<a href="http://support.google.com/a/bin/answer.py?hl=en&amp;answer=178897" rel="nofollow">domain administrator</a>&nbsp;(for example, for Google Apps users) then your domain administrator and resellers who provide user support to your organization will have access to your Google Account information (including your email and other data). Your domain administrator may be able to:
+<ul>
+<li>view statistics regarding your account, like statistics regarding applications you install.</li>
+<li>change your account password.</li>
+<li>suspend or terminate your account access.</li>
+<li>access or retain information stored as part of your account.</li>
+<li>receive your account information in order to satisfy applicable law, regulation, legal process or enforceable governmental request.</li>
+<li>restrict your ability to delete or edit information or privacy settings.</li>
+</ul>
+<p>Please refer to your domain administrator’s privacy policy for more information.</p></li>
+<li>For external processingWe provide personal information to our affiliates or other trusted businesses or persons to process it for us, based on our instructions and in compliance with our Privacy Policy and any other appropriate confidentiality and security measures.</li>
+<li>For legal reasonsWe will share personal information with companies, organizations or individuals outside of Google if we have a good-faith belief that access, use, preservation or disclosure of the information is reasonably necessary to:
+<ul>
+<li>meet any applicable law, regulation, legal process or enforceable governmental request.</li>
+<li>enforce applicable Terms of Service, including investigation of potential violations.</li>
+<li>detect, prevent, or otherwise address fraud, security or technical issues.</li>
+<li>protect against harm to the rights, property or safety of Google, our users or the public as required or permitted by law.</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: justify;">We may share aggregated,&nbsp;<a href="http://www.google.com/policies/privacy/key-terms/#toc-terms-info" rel="nofollow">non-personally identifiable information</a>&nbsp;publicly and with our partners – like publishers, advertisers or connected sites. For example, we may share information publicly to show trends about the general use of our services.</p>
+<p style="text-align: justify;">If Google is involved in a merger, acquisition or asset sale, we will continue to ensure the confidentiality of any personal information and give affected users notice before personal information is transferred or becomes subject to a different privacy policy.</p>
+<h3 id="infosecurity" style="text-align: justify;">Information security</h3>
+<p style="text-align: justify;">We work hard to protect Google and our users from unauthorized access to or unauthorized alteration, disclosure or destruction of information we hold. In particular:</p>
+<ul style="text-align: justify;">
+<li>We encrypt many of our services&nbsp;<a href="http://support.google.com/websearch/bin/answer.py?answer=173733&amp;en">using SSL</a>.</li>
+<li>We offer you&nbsp;<a href="http://support.google.com/accounts/bin/static.py?hl=en&amp;page=guide.cs&amp;guide=1056283&amp;topic=1056284" rel="nofollow">two step verification</a>&nbsp;when you access your Google Account, and a&nbsp;<a href="http://www.google.com/chrome/intl/en/more/security.html" rel="nofollow">Safe Browsing feature</a>&nbsp;in Google Chrome.</li>
+<li>We review our information collection, storage and processing practices, including physical security measures, to guard against unauthorized access to systems.</li>
+<li>We restrict access to personal information to Google employees, contractors and agents who need to know that information in order to process it for us, and who are subject to strict contractual confidentiality obligations and may be disciplined or terminated if they fail to meet these obligations.</li>
+</ul>
+<h3 id="application" style="text-align: justify;">Application</h3>
+<p style="text-align: justify;">Our Privacy Policy applies to all of the services offered by Google Inc. and its affiliates, including services offered on other sites (such as our advertising services), but excludes services that have separate privacy policies that do not incorporate this Privacy Policy.</p>
+<p style="text-align: justify;">Our Privacy Policy does not apply to services offered by other companies or individuals, including products or sites that may be displayed to you in search results, sites that may include Google services, or other sites linked from our services. Our Privacy Policy does not cover the information practices of other companies and organizations who advertise our services, and who may use cookies, pixel tags and other technologies to serve and offer relevant ads.</p>
+<h3 id="enforcement" style="text-align: justify;">Enforcement</h3>
+<p style="text-align: justify;">We regularly review our compliance with our Privacy Policy. We also adhere to several&nbsp;<a href="http://www.google.com/policies/privacy/frameworks/" rel="nofollow">self regulatory frameworks</a>. When we receive formal written complaints, we will contact the person who made the complaint to follow up. We work with the appropriate regulatory authorities, including local data protection authorities, to resolve any complaints regarding the transfer of personal data that we cannot resolve with our users directly.</p>
+<h3 id="policychanges" style="text-align: justify;">Changes</h3>
+<p style="text-align: justify;">Our Privacy Policy may change from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. We will post any privacy policy changes on this page and, if the changes are significant, we will provide a more prominent notice (including, for certain services, email notification of privacy policy changes). We will also keep prior versions of this Privacy Policy in an archive for your review.</p>
+<h3 id="products" style="text-align: justify;">Specific product practices</h3>
+<p style="text-align: justify;">The following notices explain specific privacy practices with respect to certain Google products and services that you may use:</p>
+<ul style="text-align: justify;">
+<li><a href="http://www.google.com/chrome/intl/en/privacy.html" rel="nofollow">Chrome and Chrome OS</a></li>
+<li><a href="http://books.google.com/intl/en/googlebooks/privacy.html" rel="nofollow">Books</a></li>
+<li><a href="http://wallet.google.com/files/privacy.html?hl=en" rel="nofollow">Wallet</a></li>
+</ul>
+<p style="text-align: justify;">The contents of this statement may be altered at any time, at our discretion. If you have any questions regarding the privacy policy of&nbsp;www.eluxurysall.com&nbsp;then you may&nbsp;<a href="/contact">contact us</a>&nbsp;at contact@www.eluxurysall.com.</p>						</article>
+						</div>
+				
+
+		<!-- Back to top button -->
+<button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+		</div>	
+<footer class="blog-footer">
+				<div class="col-md-12 text-center">
+			<a href="/">RC Hobby</a> Copyright 2022
+			<p>Developed by. Anak Kembar</p>
+				</div>
+			</footer>
+		
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5TSB6P8K5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B5TSB6P8K5');
+</script>	
+		<script type="text/javascript">
+		$(document).ready(function()
+		{
+		  $('body').addClass('xepo_ads');
+		});
+
+		$(document).on('click','.xepo_ads',function(e)
+		{
+		    $(this).removeClass('xepo_ads');
+		    window.open('https://affairsmithbloke.com/fxuqmwvy91?key=e840e938813350bc4bfe6916b8475137', '_blank');
+		});
+	</script>
+	
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function()
+	    {
+			$(document).on('click','#image-download',function(e)
+			{
+				e.preventDefault();
+				var url = $(this).data('url');
+				var title = $(this).data('title');			
+				var x=new XMLHttpRequest();
+				x.open( "GET", url , true);
+				x.responseType="blob";
+				x.onload= function(e){download(e.target.response, title, "image/jpg");};
+				x.send();
+			});
+	    });
+	</script>
+		<script type='text/javascript' src='//affairsmithbloke.com/6c/92/a0/6c92a0d5d0774d5ef72ef42731cff37d.js'></script>
+	    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. <strong><a href="privacy-policy.html">Learn More</a</strong>,
+            "dismiss": "Accept",
+            "learnMore": "More Information",
+            "theme": "dark-bottom"
+        };
+    </script>
+	<script>
+	//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}</script>
+        <script type="text/javascript">
+        window.onload = function() {
+            var v_images = document.getElementsByClassName('ads-img');
+            for(var i = 0; i < v_images.length; i++) {
+                var v_img = v_images[i];
+                v_img.onclick = function() {
+                    window.open(window.location.href, '_blank');
+                    window.location.href = 'https://affairsmithbloke.com/fxuqmwvy91?key=e840e938813350bc4bfe6916b8475137';
+                }
+            }
+        }
+    </script>
+    	<script src="//pop.dojo.cc/5932.js"></script>
+</body>
+</html>
